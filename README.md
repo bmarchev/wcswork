@@ -4,7 +4,7 @@ Every code-related project within WildCodeSchool
 Bruteforce.py:
 
 bruteforce.py is a python bruteforce script that only works on a specific IP that is only reachable when a specific VM (owned by WCS) is running.
-Therefore, this script also serves educational purposes. 
+Therefore, this script only serves educational purposes. 
 
 Index.html:
 
