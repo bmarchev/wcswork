@@ -1,7 +1,7 @@
 # wcswork
 Every code-related project within WildCodeSchool
 
-Bruteforce.py:
+Password BruteForce.py:
 
 Password BruteForce.py is a python bruteforce script that only works on a specific IP that is only reachable when a specific VM (owned by WCS) is running.
 Therefore, this script only serves educational purposes. 
