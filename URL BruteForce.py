@@ -1,30 +1,21 @@
 import requests
-import optparse
 
 
-wordlist = 'C:\\Users\\MARCH\\Desktop\\bruteforce\\wordlist\\test.txt'
-url = "https://s2d-entreprise.fr/"
-
-exploit = open ('C:\\Users\\MARCH\\Desktop\\bruteforce\\wordlist\\test.txt')
-
-for words in exploit:
-    r =  requests.get(url, params={wordlist})
-    r.status_code
+wordlist = 'C:\\Users\\MARCH\\Desktop\\wcswork\\loltest.txt'
 
 
-    if r ==200:
-        print(r + "DOES exist")
-
-    if r ==404:
-        print (r + "DOES NOT exist")
-
-
-
-"""
-       if b'Mot de passe invalide' in content:
-           print("Mauvais mot de passe", password)
-
+with open(wordlist) as wl:
+   line = wl.readline()
+   cnt = 1
+   for line in wordlist:
+       line = wl.readline()
+       cnt += 1
+       payload = "https://stefanys-creations.com/{}".format(line)
+       r = requests.head(payload)
+       result = r.status_code
+       if result == 200:
+           print("{}{}DOES EXIST OR REDIRECTED".format("/", line,))
+       elif result == 301:
+           print("{}{}REDIRECTED".format("/", line,))
        else:
-           print(password)
-           break
-"""
+           print("{}{}DOES NOT EXIST".format("/", line,))
